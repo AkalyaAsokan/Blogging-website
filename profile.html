@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>FORM</title>
+		<style>
+		body{
+		 
+		 background-image:url("wel.png");
+		 background-size: 660px 700px;
+		 background-repeat:no-repeat;
+
+		 }
+		
+		button{
+			background-color:black;
+			color:white;
+			padding: 10px 15px;
+			border: none;
+			cursor: pointer;
+			width: 90px;
+			font-family: "Franklin Gothic Medium";
+			font-size:15px;
+			margin-top:50px;
+			
+		}
+		.place
+		{	margin-left:610px;
+			
+			width:600px;
+			margin-top:0px;
+			height:200px;
+			padding-left:50px;
+			padding-top:10px;
+			
+			background-color:white;
+			
+		
+		}
+		input[type=text], input[type=date] {
+			width: 75%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			border: 1px solid #ccc;
+			
+		}
+		a{text-decoration:none;color:black;}
+		img{height:20px;
+		width:20px;
+		}
+		
+		</style>
+	</head>
+	<body>
+	<div class="place">
+		
+	<form  action="http://localhost//blogging.php" method="POST"  enctype="multipart/form-data">
+			<h1 style="color:black; ">LET PEOPLE KNOW YOU!!</h1>
+			<input type="text" name="user" placeholder="RETYPE YOUR USERNAME"/>
+			<br><br><br>
+			<input type="text" name="first" placeholder="FIRST NAME"/> &nbsp &nbsp &nbsp
+			<input type="text" name="last"  placeholder="LAST NAME"/>
+			<br>
+			<br>
+			DATE OF BIRTH<br>
+			<input type="date" name="date"  placeholder="DATE OF BIRTH"> 
+			<br><br>
+		
+			Gender:<br><br>
+			
+			MALE  :<input type="radio" name="gender" value="male" > &nbsp &nbsp &nbsp
+			FEMALE:<input type="radio" name="gender" value="female" >
+		
+			<br><br>
+			<select name=Locations placeholder="Select Country" id="select">
+				<option value="india">India</option>
+				<option value="america">America</option>
+				<option value="australia">Australia</option>
+				<option value="thailand">Thailand</option>
+			</select> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+			<input type="file" name="image" accept="image/*">
+	
+  <br><br>
+	<button type="reset" style="margin-left:120px;" >CLEAR</button>  &nbsp  &nbsp &nbsp <button  type="submit" style="width:170px;">SET MY PROFILE</button>
+			
+	</form>
+	
+	
+
+	
+
+</div>
+	
+	</body>
+	</html>

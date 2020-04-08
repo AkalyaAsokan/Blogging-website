@@ -1,0 +1,287 @@
+<html>
+	<head>
+	<title> home</title>
+	<style>
+		body{
+				background-color: #f0f0f0;
+				
+			}
+		
+
+		h2
+			{text-align:right;
+			font-family: "Corbel";
+		
+			}
+		.pointers{
+			cursor:pointer;
+			display:inline-block;
+			font-size:50px;
+		
+		}
+		
+		.left{	position:absolute;top:50%;left:2%;
+	
+		}
+		.right
+		{	position:absolute;top:50%;right :2%;
+		}
+		.pointers:hover
+		{	color:white;
+		}
+		.pics
+		{
+			align:center;
+		}
+		form {
+			border: 3px solid #fff;
+			cellpadding:20px;
+		}
+		input[type=text], input[type=password] {
+			width: 75%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			border: 1px solid #ccc;
+			
+		}
+		a{
+			background-color:#f0f0f0;
+			color:black;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border-radius:32px;
+			cursor: pointer;
+			width: 50%;
+			text-decoration:none;
+		}
+		a:hover {
+			opacity: 0.8;
+		}
+		button{
+			background-color:black;
+			color:white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 50%;
+		}
+		button:hover {
+			opacity: 0.8;
+		}
+		.l{margin-top:500px;}
+		.r{margin-top:500px;}
+		
+		.login
+		{
+			font-family: "Franklin Gothic Medium";
+			padding:130px;
+			float:left;
+			margin-top:0px;
+			
+		}
+		.signIn
+		{
+			font-family: "Franklin Gothic Medium";
+			padding:120px;
+			float:right;
+			margin-top:0px;
+		
+		}
+		.pics
+		{	float:left;
+			position:absolute;
+		}
+		.contents
+		{	float:right;
+			padding:120px 20px 100px 20px;
+			background-color:#7d7d7d;
+			color:white;
+			position:absolute;
+			right:0;
+			width:18%;
+			height:52.5%;
+			font-family:"Consolas";
+		}
+		
+		.rig
+		{	float:right;
+			padding:80px 120px 100px 120px;
+			position:absolute;
+			right:0;
+			width:18%;
+			height:20%;
+			font-family:"Candara";
+			font-size:26px;
+			color:#3c3c3c;
+		}
+		.lft
+		{	float:left;
+			padding:50px 120px 100px 120px;
+			position:absolute;
+			left:0;
+			width:18%;
+			height:20%;
+			font-family:"Candara";
+			font-size:26px;
+			color:#3c3c3c;
+			
+		}
+		.about
+		{	margin-top:30px;
+		}
+		.contact{
+			
+			background-color:#4b4b4b;
+			color:white;
+			padding:20px 230px 40px 60px;
+			width:100%;
+			float:bottom;
+			margin-top:1050px;
+			font-family:"MS Sans Serif";
+			
+		}	
+		
+	</style>
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mypics");
+		  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		}
+		
+		
+		function validatespsw()
+		{	var msg;  
+			if(document.signup.spsw.value.length>7)
+			{  
+				msg="good";  
+			}  
+			else
+			{  
+				msg="poor";  
+			}  
+			document.getElementById('mylocation').innerText=msg;  
+		}
+		function validaterspsw()
+		{	var pwd1=document.signup.spsw.value;
+			var pwd2=document.signup.spsw_repeat.value;
+			if(pwd1!=pwd2)
+				alert("PASSWORDS DO NOT MATCH!!");
+		}
+		function validatetxt()
+		{	
+			var regExp=new RegExp('^[a-z A-Z]+[0-9]*[a-z A-Z]*$');  
+			
+			var user=document.signup.suname.value;
+			//console.log(user);
+			if(regExp.test(user)==false)
+			{	alert("Invalid Username");
+			}
+		}
+		function validatemail()
+		{	//alert("fun called");
+			var regExp=new RegExp('^[a-z A-Z]+[0-9]*@[a-z]+.{1}[a-z]+.{0,1}[a-z]*'); 
+			var mail=document.signup.semail.value;
+			if(regExp.test(mail)==false)
+			{	alert("Invalid Email account");
+			}
+		}
+</script>
+
+	</head>
+	<body>
+			<br><h2><font color=#505050><a>HOME</a> &nbsp &nbsp <a href="#abt">ABOUT</a> &nbsp &nbsp <a href="#down">LOGIN</a> &nbsp &nbsp <a href="#down">SIGNUP</a> &nbsp &nbsp <a href="#con">CONTACT</a></h2></font>  
+			<div class="mypics">
+				<img class="pics" src="1.jpg" height="85%" width="80%" >
+				<div class="contents"><h3> Whether you'd like to share your knowledge, experiences or the latest news, create a unique and beautiful blog for free.</h3><a href="#down">GET STARTED</a></div>
+			</div>
+			<div class="mypics">
+				<img class="pics" src="2.jpg" height="85%" width="80%" >
+				<div class="contents"> <h3>Whether you'd like to share your knowledge, experiences or the latest news, create a unique and beautiful blog for free.</h3><a href="#down">GET STARTED</a></div>
+			</div>
+			<div class="mypics">
+				<img class="pics" src="3.jpg" height="85%" width="80%" >
+				<div class="contents"> <h3>Whether you'd like to share your knowledge, experiences or the latest news, create a unique and beautiful blog for free.</h3><a href="#down">GET STARTED</a></div>
+			</div>
+			<div class="mypics">
+				<img class="pics" src="4.jpg" height="85%" width="80%" >
+				<div class="contents"><h3> Whether you'd like to share your knowledge, experiences or the latest news, create a unique and beautiful blog for free.</h3><a href="#down">GET STARTED</a></div>
+			</div><br>
+			<div class="pointers" onclick="plusDivs(-1)"><div class="left ">&#10094;</div></div>
+			<div class="pointers" onclick="plusDivs(1)"><div class="right">&#10095;</div></div><br>
+		<script>
+			var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mypics");
+			for (i = 0; i < x.length; i++) {
+			   x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+		</script>
+		
+		<div class="about" >
+			<br><br><br><br><div class="l"><img src="text1.png"id="abt" style="height:500px; width:800px;float:left; "> <h3 class="rig"> The TEXT option allows you to communicate your feelings, thoughts and a lot more within a single click.</h3></div> <br><br> <div class="r"><img src="img1.png" style="height:500px; width:800px; margin-top:30px;float:right;"><h3 class="lft"> Post your best PICS here and share your daily activities with a press of a button.</h3></div> <br><br> <div class="l"><img src="video1.png" style="height:500px; width:800px; margin-top:30px;float:left;" ><h3 class="rig"> A simple, fun and creative way to capture, edit and share VIDEOS with friends.</h3> </div><br><br><div class="l"> <img src="share2.png" style="height:500px; width:800px; margin-top:30px;float:right;"> <h3 class="lft"> Happiness is not much in having as sharing. We make a living by what we get, but we make a life by what we give. The joy of SHARING!!</h3> </div><br><br><div class="l"><img  src="quotes3.png" style="height:500px; width:800px; margin-top:30px; float:left;"> <h3 class="rig"> Feel like a wise once in a while??. Rejoice the movement by sharing your wise QUOTES to the rest of the world.</h3></div><br><br><div class="l"> <img src="music2.png" style="height:500px; width:800px; margin-top:30px;float:right;" ><h3 class="lft"> Its crazy how MUSIC connects souls. Share your favourite tunes within the blink of an eye. </h3> </div><br><br> 
+		
+		</div>
+		<form action="http://localhost//lblogging.php" method="POST" >
+			 
+			<div class="login" >
+				<h3 >LOGIN TO VIEW YOUR CONTENTS AND <br>CREATE NEW BLOGS</h3>
+				<br><input type="text" placeholder="Enter Username" name="luname" required>
+				<br>
+				<input type="password" placeholder="Enter Password" name="lpsw" required>
+				<br>
+				<button type="submit">LOGIN</button>
+				<br>
+		
+			</div>
+		</form>
+		<form name="signup" action="http://localhost//sblogging.php" method="POST">
+			  <div class="signIn">
+				<h3 id="down"> JOIN NOW AND PUBLISH YOUR PASSION YOUR WAY!!  </h3>
+				<br><input type="text" placeholder="Enter Username" name="suname" required onblur=validatetxt()>
+				<br>
+				<input type="text" placeholder="Enter Email" name="semail" required onblur=validatemail() >
+				<br>
+				<input type="password" placeholder="Enter Password" name="spsw" required onkeyup=validatespsw()>&nbsp <span id="mylocation">no strength</span>
+				<br>
+				<input type="password" placeholder="Repeat Password" name="spsw_repeat" required onblur=validaterspsw()>
+				<br>
+				<button type="submit" >SIGN UP</button>
+				<br>
+				<br>
+			  </div>
+		</form>
+		<div class="contact">
+			<h3 id="con">CONTACT US</h3>
+			Promote your business, showcase your art, or just test out new ideas. <br>The Qsn website builder has everything you need to create a fully<br> personalized, high-quality free blog.<br> <br>
+			@www.facebook.com/Qsnbuilders/<br>
+			@www.youtube.com/Qsnblog/<br>
+			@www.gmail.com/Qsnbloggers/
+			<br><br>
+			copyright &copy 1999-2017 QsnBlog 
+		
+		</div>
+		
+	</body>
+</html>
